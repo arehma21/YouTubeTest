@@ -19,6 +19,7 @@ public class MainActivity extends YouTubeBaseActivity {
     private YouTubePlayerView videoplayer;
     private YouTubePlayer.OnInitializedListener onInitializedListener;
     private YouTubePlayer youtubeplayerInstance;
+    private int index = 0;
     private int score = 100;
 
     @Override
@@ -56,6 +57,7 @@ public class MainActivity extends YouTubeBaseActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                index++;
                 youtubeplayerInstance.next();
                 //openFrench();
 
@@ -66,6 +68,7 @@ public class MainActivity extends YouTubeBaseActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                index--;
                 youtubeplayerInstance.previous();
 
 
