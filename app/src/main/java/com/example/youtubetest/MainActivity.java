@@ -11,6 +11,8 @@ import com.google.android.youtube.player.YouTubePlayerView;
 import android.os.Bundle;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class MainActivity extends YouTubeBaseActivity {
     private Button button;
     private Button buttonFrench;
@@ -21,6 +23,7 @@ public class MainActivity extends YouTubeBaseActivity {
     private YouTubePlayer youtubeplayerInstance;
     private int index = 0;
     private int score = 100;
+    private ArrayList<String> answers = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
