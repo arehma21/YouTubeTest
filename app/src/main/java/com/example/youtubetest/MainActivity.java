@@ -21,16 +21,19 @@ public class MainActivity extends YouTubeBaseActivity {
     Button skip;
     private YouTubePlayerView videoplayer;
     private YouTubePlayer.OnInitializedListener onInitializedListener;
-    private ArrayList<String> songs = new ArrayList<String>();
+    //private YouTubePlayer youtubeplayerInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         videoplayer = (YouTubePlayerView) findViewById(R.id.videoPlayer);
+        skip = (Button) findViewById(R.id.skipButton);
         onInitializedListener = new YouTubePlayer.OnInitializedListener() {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youtubeplayer, boolean b) {
                 youtubeplayer.loadVideo("lS7StcykQF4");
+                //youtubeplayerInstance = youtubeplayer;
+                //youtubeplayer.loadPlaylist("PLneMAXahek_U9RQqSd4-ldMQ6rIT5c58_");
 
             }
             public void onInitializationFailure(YouTubePlayer.Provider provider,
@@ -49,11 +52,12 @@ public class MainActivity extends YouTubeBaseActivity {
         });
 
 
-        skip = (Button) findViewById(R.id.skipButton);
+
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openFrench();
+                //youtubeplayerInstance.next();
+                //openFrench();
 
 
 
