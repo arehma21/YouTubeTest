@@ -32,6 +32,7 @@ public class MainActivity extends YouTubeBaseActivity {
         videoplayer = (YouTubePlayerView) findViewById(R.id.videoPlayer);
         skip = (Button) findViewById(R.id.skipButton);
         back = (Button) findViewById(R.id.backButton);
+        initializeAnswers();
 
         onInitializedListener = new YouTubePlayer.OnInitializedListener() {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youtubeplayer, boolean b) {
@@ -81,6 +82,14 @@ public class MainActivity extends YouTubeBaseActivity {
     public void openFrench() {
         Intent intent = new Intent(MainActivity.this, NextSongFrench.class);
         startActivity(intent);
+    }
+    public void initializeAnswers() {
+        answers.add("France");
+        answers.add("Nigeria");
+        answers.add("Germany");
+        answers.add("Japan");
+        answers.add("Turkey");
+        answers.add("United Kingdom");
     }
 
 }
