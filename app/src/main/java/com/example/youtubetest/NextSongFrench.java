@@ -38,7 +38,7 @@ public class NextSongFrench extends YouTubeBaseActivity {
 
             }
         };
-        buttonFrench = findViewById(R.id.playVideoFrench);
+        //buttonFrench = findViewById(R.id.playVideoFrench);
         buttonFrench.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
